@@ -1,4 +1,4 @@
-# Rock-paper-scissors-lizard-Spock template
+# Rock-paper-scissors-lizard-Spock game
 import random
 
 # The key idea of this program is to equate the strings
@@ -14,7 +14,7 @@ import random
 # helper functions
 
 def name_to_number(name):
-    # delete the following pass statement and fill in your code below
+    
     if name == "rock" :
         return '0'
     elif name == "spock":
@@ -27,12 +27,11 @@ def name_to_number(name):
         return '4'
     else:
         print "WRONG INPUT"
-    # convert name to number using if/elif/else
-    # don't forget to return the result!
+    
 
 
 def number_to_name(number):
-    # delete the following pass statement and fill in your code below
+    
     if number == 0 :
         return "rock"
     elif number == 1:
@@ -46,11 +45,10 @@ def number_to_name(number):
     else:
         return "wrong input!"
     
-    # convert number to a name using if/elif/else
-    # don't forget to return the result!
+    
    
 def rpsls(player_choice): 
-    # delete the following pass statement and fill in your code below
+   
     
     # print a blank line to separate consecutive games
       print ""
@@ -69,15 +67,18 @@ def rpsls(player_choice):
     # use if/elif/else to determine winner, print winner message
       if (result == 1) or (result== 2):
             print "Computer wins"
-      else:
+      elif (result ==3)or (result ==4):
+
             print "Player wins!"
+                else:
+                    print "There is something wrong!"
         
             
     
-# test your code - THESE CALLS MUST BE PRESENT IN YOUR SUBMITTED CODE
+# Takes input from user
 user_input = input('Enter your name: ')
 user_choice = input('Enter your choice:').lower()
-
+# Print user's name and choice
 print "Hey!" + user_input 
 print "You choose "  + user_choice
 
@@ -85,12 +86,12 @@ print "You choose "  + user_choice
 
 rpsls(user_choice)
 
+#Test functions
 #rpsls("rock")
 #rpsls("Spock")
 #rpsls("paper")
 #rpsls("lizard")
 #rpsls("scissors")
 
-# always remember to check your completed program against the grading rubric
 
 
